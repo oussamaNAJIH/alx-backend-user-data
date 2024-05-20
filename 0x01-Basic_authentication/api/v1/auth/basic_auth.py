@@ -20,7 +20,6 @@ class BasicAuth(Auth):
             return None
         if not isinstance(authorization_header, str):
             return None
-        if authorization_header[0: 6] != "Basic ":
+        if not authorization_header.startswith("Basic "):
             return None
-        data_to_encode = (authorization_header[6: ]).encode('utf-8')
-        return base64.b64encode(data_to_encode).decode('utf-8')
+        return authorization_header[6:]
