@@ -23,4 +23,4 @@ class BasicAuth(Auth):
         if authorization_header[0: 6] != "Basic ":
             return None
         data_to_encode = (authorization_header[6: ]).encode('utf-8')
-        return base64.b64encode(data_to_encode)
+        return base64.b64encode(data_to_encode).decode('utf-8')
