@@ -26,7 +26,7 @@ def unauthorized(error) -> str:
     """
     unauthorized
     """
-    return jsonify({"error": "Unauthorized"})
+    return jsonify({"error": "Unauthorized"}), 401
 
 
 if __name__ == "__main__":
