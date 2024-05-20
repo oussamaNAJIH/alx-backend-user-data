@@ -2,11 +2,10 @@
 """
 This module for BasicAuth class
 """
-from api.v1.auth import Auth
+from api.v1.auth.auth import Auth
 
 
 class BasicAuth(Auth):
     """
     BasicAuth inherits from Auth class
     """
-    pass
