@@ -27,7 +27,7 @@ def stats() -> str:
 
 
 @app_views.route('/unauthorized')
-def non_authorized():
+def non_authorized() -> None:
     """
     raise a 401 error
     """
