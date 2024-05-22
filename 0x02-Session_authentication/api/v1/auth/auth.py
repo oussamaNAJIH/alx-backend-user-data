@@ -5,6 +5,7 @@ This module for Auth class
 from flask import request
 from typing import List, TypeVar
 from api.v1.views.users import User
+import os
 
 
 class Auth():
@@ -47,4 +48,5 @@ class Auth():
         """
         if request is None:
             return None
-        return request.cookies.get('_my_session_id')
+        session_name = os.getenv('SESSION_NAME', '_my_session_id')
+        return request.cookies.get(session_name)
