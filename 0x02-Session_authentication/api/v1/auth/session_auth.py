@@ -5,6 +5,7 @@ This module for SessionAuth class
 from api.v1.auth.auth import Auth
 import uuid
 
+
 class SessionAuth(Auth):
     """
     SessionAuth class
